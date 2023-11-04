@@ -57,6 +57,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.shoopingcart.R
 import com.example.shoopingcart.data.Cart
+import com.example.shoopingcart.ui.theme.White
 import com.example.shoopingcart.ui.theme.dp10
 import com.example.shoopingcart.ui.theme.dp150
 import com.example.shoopingcart.ui.theme.dp16
@@ -150,10 +151,10 @@ fun Header(cart: Cart, modifier: Modifier, isAppliedCode: Boolean, couponTextVis
                     .height(dp150)
             ) {
 
-                Text(text = cart.name, style = typography.bodyMedium)
+                Text(text = cart.name, style = typography.bodyMedium,color = White)
                 if (isAppliedCode) {
                     Row {
-                        Text(text = "\u20B9 ${cart.discountPrice}", style = typography.bodyMedium)
+                        Text(text = "\u20B9 ${cart.discountPrice}", style = typography.bodyMedium, color = White)
                         Text(
                             text = " \u20B9 ${cart.actualPrice}",
                             style = typography.bodyMedium,
@@ -170,7 +171,7 @@ fun Header(cart: Cart, modifier: Modifier, isAppliedCode: Boolean, couponTextVis
                     Text(
                         text = "\u20B9 ${cart.actualPrice}",
                         style = typography.bodyMedium,
-                        fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Bold,color = White
                     )
                 }
 
@@ -180,7 +181,7 @@ fun Header(cart: Cart, modifier: Modifier, isAppliedCode: Boolean, couponTextVis
                         style = typography.labelMedium,
                         color = Color.White.copy(0.5f)
                     )
-                    Text(text = cart.size, style = typography.bodySmall)
+                    Text(text = cart.size, style = typography.bodySmall,color = White)
                 }
                 Row {
                     Text(
@@ -188,7 +189,7 @@ fun Header(cart: Cart, modifier: Modifier, isAppliedCode: Boolean, couponTextVis
                         style = typography.labelMedium,
                         color = Color.White.copy(0.5f)
                     )
-                    Text(text = cart.qty.toString(), style = typography.bodySmall)
+                    Text(text = cart.qty.toString(), style = typography.bodySmall,color = White)
                 }
 
             }
@@ -204,7 +205,7 @@ fun SellerName(cart: Cart, modifier: Modifier) {
     val typography = MaterialTheme.typography
     Row(horizontalArrangement = Arrangement.SpaceBetween, modifier = modifier) {
         Row(modifier = Modifier.padding(horizontal = dp5)) {
-            Text(text = cart.sellerName, style = typography.labelMedium)
+            Text(text = cart.sellerName, style = typography.labelMedium,color = White)
             Image(
                 painter = painterResource(id = R.drawable.baseline_verified_24),
                 contentDescription = null,
@@ -216,7 +217,7 @@ fun SellerName(cart: Cart, modifier: Modifier) {
                 color = Color.White.copy(0.5f)
             )
         }
-        Text(text = "ETA 5-7 working days", style = typography.bodySmall)
+        Text(text = "ETA 5-7 working days", style = typography.bodySmall,color = White)
     }
 }
 
@@ -265,7 +266,7 @@ fun ApplyCoupon(
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 focusedBorderColor = colorResource(id = R.color.Green),
                 focusedLabelColor = colorResource(id = R.color.Green),
-                cursorColor = colorResource(id = R.color.white)
+                cursorColor = colorResource(id = R.color.white), textColor = White
 
             ),
             onValueChange = {
@@ -286,9 +287,9 @@ fun ApplyCoupon(
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(
                     painter = painterResource(id = R.drawable.baseline_discount_24),
-                    contentDescription = "", modifier = Modifier.padding(horizontal = dp8)
+                    contentDescription = "", modifier = Modifier.padding(horizontal = dp8), tint  = White
                 )
-                Text(text = "Apply coupon code", style = MaterialTheme.typography.labelMedium)
+                Text(text = "Apply coupon code", style = MaterialTheme.typography.labelMedium,color = White)
             }
 
         }

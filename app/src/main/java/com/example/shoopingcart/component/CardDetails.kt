@@ -21,9 +21,11 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.shoopingcart.R
+import com.example.shoopingcart.ui.theme.White
 import com.example.shoopingcart.ui.theme.dp10
 import com.example.shoopingcart.ui.theme.dp16
 import kotlinx.coroutines.delay
@@ -49,24 +51,24 @@ fun CardDetails(price:String,CouponPrice:String,totalPrice:String) {
 
         Row(horizontalArrangement = Arrangement.SpaceBetween, modifier = modifier) {
             Text(text = "Price", style = typography, color = color)
-            Text(text = "₹ $price",style = typography,)
+            Text(text = "₹ $price",style = typography, color = White)
         }
 
         Row(horizontalArrangement = Arrangement.SpaceBetween,modifier = modifier) {
             Text(text = "Delivery Charge",style = typography, color = color)
-            Text(text = "Free",style = typography)
+            Text(text = "Free",style = typography, color = White)
         }
 
         Row(horizontalArrangement = Arrangement.SpaceBetween,modifier = modifier) {
             Text(text = "Coupon Discount",style = typography, color = color)
-            Text(text = "-  ₹ $CouponPrice",style = typography)
+            Text(text = "-  ₹ $CouponPrice",style = typography, color = White)
         }
 
         Divider(color = colorResource(id = R.color.white).copy(0.2f), thickness = 2.dp)
 
         Row(modifier = modifier,horizontalArrangement = Arrangement.SpaceBetween,) {
-            Text(text = "Total",style = typography, color = color)
-            Text(text = "₹ $totalPrice",style = typography,)
+            Text(text = "Total",style = typography, color = color, fontSize = 20.sp, fontWeight = FontWeight.Bold)
+            Text(text = "₹ $totalPrice",style = typography, color = White)
         }
     }
 }
