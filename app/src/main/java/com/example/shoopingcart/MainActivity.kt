@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.shoopingcart.component.CartScreen
 import com.example.shoopingcart.ui.theme.ShoopingCartTheme
-
+//Commented By Jayshree
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
