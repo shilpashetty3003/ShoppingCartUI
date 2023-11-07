@@ -14,7 +14,7 @@ object DummyData {
             2,
             "Nike",
             2000,
-            1000,false
+            1000, false
 
         ),
         Cart(
@@ -25,8 +25,7 @@ object DummyData {
             2,
             "Nike",
             2000,
-            1000,false
-
+            1000, false
         ),
 //        Cart(
 //            3,
@@ -40,4 +39,6 @@ object DummyData {
 //1
 //        )
     )
+
+
 }

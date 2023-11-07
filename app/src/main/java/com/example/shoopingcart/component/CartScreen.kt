@@ -7,6 +7,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -30,16 +31,14 @@ fun CartScreen() {
         mutableStateOf(DummyData.shoppingList)
     }
     var totalPrice by remember {
-        mutableStateOf(0)
+        mutableIntStateOf(0)
     }
-
     var price by remember {
-        mutableStateOf(0)
+        mutableIntStateOf(0)
     }
     var couponDiscount by remember {
-        mutableStateOf(0)
+        mutableIntStateOf(0)
     }
-
     val gradientColor = listOf(Color(0xFF4CBB17), Color(0xFF54F00A))
 
     LazyColumn(modifier = Modifier.background(color = DarkJungleGreen)) {
